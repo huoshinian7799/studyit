@@ -29,55 +29,12 @@
             </form>
         </div>
     </div>
-     <?php include "/views/public/js.html" ?>
+    <script src="/views/static/libs/require.js"></script>
+    <script src="/views/static/libs/config.js"></script>
+
      <script>
+        require(["static/js/dashboard/login"]);
      
-//                $(function (){
-//             $("#login-form").submit(function(){
-//                 var fromName = $("#login-name").val()
-//                 var fromPass = $("#login-pass").val()
-//                  $.ajax({
-//                     url:"/api/login",
-//                     type:"post",
-//                     data:{
-//                         tc_name:fromName,
-//                         tc_pass:fromPass
-//                 },
-//                 success:function(data){
-//                     console.log(data)
-//                     if(data.code ==200){
-//                     $.cookie("userinfo", JSON.stringify(data.result), {path: "/"});
-//                         location.href = "/"
-//                     }
-//                 },
-//                 error:function(){
-//                     console.log('出错了')
-//                 }
-//             })
-//                  return false
-//         })
-           
-// })
-//      
-      $("#login-form").submit(function(){
-        $(this).ajaxSubmit({
-            url:"/api/login",
-            type:"post",
-            success:function(data){
-                if(data.code == 200){
-                    $.cookie("userinfo",JSON.stringify(data.result),{path: "/"});
-                    location.href = "/";
-                }
-                
-            },
-            error:function(){
-                    console.log('出错了')
-            }
-        })
-        return false 
-      })
-       
-    
      </script>
 </body>
 </html>

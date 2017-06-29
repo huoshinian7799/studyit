@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>学IT - 后台管理系统</title>
-    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="./assets/nprogress/nprogress.css">
-    <link rel="stylesheet" href="./less/index.css">
+    <?php include "/views/public/css.html" ?>
 </head>
 <body>
     
     <!-- 侧边栏 -->
+    <?php include "/views/public/aside.html" ?>
     <div class="aside">
         <!-- 个人资料 -->
         <div class="profile">
+       
             <!-- 头像 -->
+
             <div class="avatar img-circle">
-                <img src="./uploads/avatar.jpg">
+                <img src="/uploads/avatar.jpg">
             </div>
             <h4>布头儿</h4>
         </div>
@@ -24,19 +24,19 @@
         <div class="navs">
             <ul class="list-unstyled">
                 <li>
-                    <a href="./index.html">
+                    <a href="index.html">
                         <i class="fa fa-home"></i>
                         仪表盘
                     </a>
                 </li>
                 <li>
-                    <a href="./user_list.html" class="active">
+                    <a href="user/list" class="active">
                         <i class="fa fa-bell"></i>
                         用户管理
                     </a>
                 </li>
                 <li>
-                    <a href="./teacher_list.html">
+                    <a href="teacher_list">
                         <i class="fa fa-bell"></i>
                         讲师管理
                     </a>
@@ -49,12 +49,12 @@
                     </a>
                     <ul class="list-unstyled">
                         <li>
-                            <a href="./course_add.html">
+                            <a href="course_add">
                                  课程添加
                             </a>
                         </li>
                         <li>
-                            <a href="./course_list.html">
+                            <a href="course_list.html">
                                 课程列表
                             </a>
                         </li>
@@ -215,7 +215,7 @@
                                 <td>2016/05/01 10:12:32</td>
                                 <td>2016/05/10 12:16:19</td>
                                 <td>
-                                    <a href="./user_profile.html" class="btn btn-info btn-xs">查看</a>
+                                    <a href="user_profile.html" class="btn btn-info btn-xs">查看</a>
                                     <a href="javascript::" class="btn btn-warning btn-xs">锁定</a>
                                 </td>
                             </tr>
@@ -423,7 +423,7 @@
                                 <td>2016/05/01 10:12:32</td>
                                 <td>2016/05/10 12:16:19</td>
                                 <td>
-                                    <a href="./user_profile.html" class="btn btn-info btn-xs">查看</a>
+                                    <a href="user_profile.html" class="btn btn-info btn-xs">查看</a>
                                     <a href="javascript::" class="btn btn-warning btn-xs">锁定</a>
                                 </td>
                             </tr>
@@ -444,9 +444,6 @@
         </div>
     </div>
 
-    <script src="./assets/jquery/jquery.min.js"></script>
-    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./assets/nprogress/nprogress.js"></script>
-    <script src="./js/common.js"></script>
+    <?php include "/views/public/js.html" ?>
 </body>
 </html>

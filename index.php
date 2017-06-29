@@ -19,8 +19,6 @@
 		$fileName = $pathArr[1];
 
 	//用户只传了目录名
-	}else if(count($pathArr) == 1){
-		$directory = $pathArr[0];
 	}
 
 	//如果用户啥都没传 那就目录和文件全都是默认值
